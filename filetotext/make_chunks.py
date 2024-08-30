@@ -2,7 +2,7 @@ from os import mkdir
 from cryptography.fernet import Fernet
 from time import perf_counter_ns
 
-def chunked(filepath: str, key: bytes, chunks: int=3000000) -> int:
+def chunked(filepath: str, key: bytes, chunks: int=3000000, willcompress: bool=True) -> int:
 	"""
 	chunks, encrypts and saves the file in the 'output/id' folder.
 	function returns the id.
@@ -13,7 +13,7 @@ def chunked(filepath: str, key: bytes, chunks: int=3000000) -> int:
 		return f"Invalid key\n{e}"
 
 	unix_1 = perf_counter_ns()
-	outdir = f"output/{unix_1}"
+	outdir = f"output/temp_{unix_1}" if willcompress else outdir = f"output/{unix_1}"
 
 	try:
 		mkdir(outdir)

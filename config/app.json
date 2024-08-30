@@ -1,4 +1,5 @@
 {
     "keyfile": "config/app.key",
-    "chunk_lenght": 1024
+    "chunk_lenght": 1024,
+    "compress": true, "compression_level": 6
 }
