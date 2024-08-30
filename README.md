@@ -13,16 +13,16 @@ I'll use it in my later projects. There will probably no use anything other than
 
 Go to the project directory
 ```bash
-	cd filetotext
+cd filetotext
 ```
 Configure the script && Change the key
 ```bash
-	cd config
-	*make changes*
-	cd ..
+cd config
+*make changes*
+cd ..
 ```
 
 Run the script
 ```bash
-	python main.py <file> [filename]
+python main.py <file> [filename]
 ```
