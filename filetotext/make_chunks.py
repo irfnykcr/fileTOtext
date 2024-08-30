@@ -2,7 +2,7 @@ from os import mkdir
 from cryptography.fernet import Fernet
 from time import perf_counter_ns
 
-def chunked(file, key, chunks=3000000):
+def chunked(filepath: str, key: bytes, chunks: int=3000000) -> int:
 	"""
 	chunks, encrypts and saves the file in the 'output/id' folder.
 	function returns the id.
@@ -26,7 +26,7 @@ def chunked(file, key, chunks=3000000):
 			return f"Cannot create directory.\n{e}"
 
 	try:
-		with open(file, "rb") as f:
+		with open(filepath, "rb") as f:
 			while chunk := f.read(chunks):
 				unix_2 = perf_counter_ns()
 				with open(fr"{outdir}/{unix_2}", "ab") as fw:
