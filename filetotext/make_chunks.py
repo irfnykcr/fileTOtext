@@ -3,6 +3,10 @@ from cryptography.fernet import Fernet
 from time import perf_counter_ns
 
 def chunked(file, key, chunks=3000000):
+	"""
+	chunks, encrypts and saves the file in the 'output/id' folder.
+	function returns the id.
+	"""
 	try:
 		fer = Fernet(key)
 	except Exception as e:
