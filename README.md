@@ -24,5 +24,6 @@ cd ..
 
 Run the script
 ```bash
-python main.py <file> [filename]
+python main.py <chunk> <file> [filename]
+python main.py <dechunk> <file_dir>
 ```
