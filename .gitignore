@@ -1,2 +1,4 @@
-filetotext/__pycache__/
+filetotext/__pycache__
 test/
+output/
+.pytest_cache
