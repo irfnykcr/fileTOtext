@@ -1,7 +1,6 @@
 from zlib import compress as z_compress
 from os import listdir, mkdir
 from shutil import rmtree
-
 def compress(fname:str, r: int, level: int = 6):
 	oldout = fr"output/temp_{r}"
 	newout = fr"output/{r}-{fname}"

@@ -1,5 +1,4 @@
 from zlib import decompress as z_decompress
-
 def decompress(filepath: str) -> bytes:
 	try:
 		with open(fr"{filepath}", "rb") as f:

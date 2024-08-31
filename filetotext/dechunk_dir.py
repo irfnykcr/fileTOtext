@@ -2,7 +2,6 @@ from os import listdir
 from time import perf_counter_ns
 from cryptography.fernet import Fernet
 from filetotext import decompress_file
-
 def dechunked(dirpath: str, key: bytes, willcompress: bool) -> str:
 	try:
 		fer = Fernet(key)
@@ -16,9 +15,7 @@ def dechunked(dirpath: str, key: bytes, willcompress: bool) -> str:
 			fname = (dirpath.split("/")[-1]).split("-")[-1]
 		except:
 			return "Invalid directory path"
-
 	for file in listdir(dirpath):
-		
 		if willcompress:
 			try:
 				data = decompress_file.decompress(filepath=fr"{dirpath}/{file}")
